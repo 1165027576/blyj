@@ -2,6 +2,7 @@ let gulp = require('gulp');//等价于HTML代码：<script src='gulp.js'>
 // let concat = require('gulp-concat');
 // let uglify = require('gulp-uglify');
 // let rename = require('gulp-rename');
+// let sass = require('gulp-sass');
 
 //这个任务：把当前目录下的index.html文件拷贝到服务器目录
 // gulp.task("copy-html", async ()=>{
@@ -25,7 +26,9 @@ gulp.task("watchall",async ()=>{
 		gulp.src("css/**/*.css").pipe(gulp.dest("D:\\phpStudy\\WWW\\blyj\\css"));
     });
     
-    
+  // gulp.watch("sass/**/*",async ()=>{
+	// 	gulp.src()
+	// }) 
 	// //合并
 	// gulp.watch(["js/index.js","js/goodslist.js"],async ()=>{
 	// 	gulp.src(["js/index.js","js/goodslist.js"])
