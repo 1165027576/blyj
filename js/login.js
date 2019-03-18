@@ -88,7 +88,6 @@ $(function(){
 							d.setDate(d.getDate()+7);
 							document.cookie = "userphone="+$(".login_input_zhang").val()+";expires="+d.toGMTString();
 							document.cookie = "userpass="+$(".login_input_mi").val()+";expires="+d.toGMTString();
-
 						}
 						window.location.href="index.html"
 						alert("登录成功");

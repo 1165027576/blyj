@@ -403,15 +403,9 @@ a{
 	float: left;
 }
 .click_toggle .opacity{
-	/*opacity: 0;*/
 	position: absolute;
-	/*left: 0;
-	top: 0;
-	z-index: 1;*/
 }
 .opacity a{
-	/* height:100%;
-	width: 100%; */
 	display: block;
 }
 .opacity img{
