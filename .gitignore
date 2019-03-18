@@ -41,3 +41,5 @@ local.sbt
 *.springBeans
 
 /node_modules/
+/*.js
+/*.json
