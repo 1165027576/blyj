@@ -25,7 +25,9 @@ gulp.task("watchall",async ()=>{
     gulp.watch("css/**/*",async ()=>{
 		gulp.src("css/**/*.css").pipe(gulp.dest("D:\\phpStudy\\WWW\\blyj\\css"));
     });
-    
+		gulp.watch("php/**/*",async ()=>{
+			gulp.src("php/**/*").pipe(gulp.dest("D:\\phpStudy\\WWW\\blyj\\php"));
+		});
   // gulp.watch("sass/**/*",async ()=>{
 	// 	gulp.src()
 	// }) 

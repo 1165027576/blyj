@@ -8,13 +8,6 @@ $(function(){
 			$(".gou a").css({"background-image":"","background-size":""});
 		}
 	);
-	// 点击登录提示
-	// $(".login_sub1").click(function(){
-	// 	$(".push_zhang").css("visibility","visible");
-	// });
-	// $(".btn").click(function(){
-	// 	$(".push_zhang").css("visibility","hidden");
-	// });
 
 	$(".login_sub1").click(function(){
 		if($(".login_input_zhang").val()==""){
@@ -77,7 +70,7 @@ $(function(){
 		if(usernum == 1 && passnum == 1 ){
 			$.ajax({
 				"type":"POST",
-				"url":"loginCheck.php",
+				"url":"php/loginCheck03.php",
 				"data":{"userphone":$(".login_input_zhang").val(),
 						"userpass":$(".login_input_mi").val()},
 				success: function (data) { //返回json结果
@@ -119,7 +112,7 @@ $(function(){
 			usernum = 0;
 		}else{
 				$.get(
-					"checkUser.php",
+					"php/checkuser02.php",
 					{
 						"userphone":$(".reg_phone").val()	
 					},
@@ -176,7 +169,7 @@ $(function(){
 		if(usernum == 1 && psw == 1 && pswes == 1){
 			$.ajax({
 				"type":"POST",
-				"url":"regSave.php",
+				"url":"php/regSave.php",
 				"data":{"userphone":$(".reg_phone").val(),
 				"userpass":$(".reg_passw").val()},
 				success: function (data) { //返回json结果
@@ -189,4 +182,5 @@ $(function(){
 		}
 		
 	})
+
 });
