@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <title>暴龙眼镜首页</title>
-    <link rel="stylesheet" href="css/gentleman.css" />
+    <link rel="stylesheet" href="css/shoppingCar.css" />
     <link rel="stylesheet" href="css/swiper.min.css">
     <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="js/swiper.min.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
+    <script src="js/cookieTools.js"></script>
+    <script type="text/javascript" src="js/shoppingCar.js"></script>
 </head>
 
 <body>
@@ -171,278 +172,129 @@
         </ul>
 
     </div>
+
     <!-- content -->
-    <div class="con-wrapper">
-        <div class="con-hed">
-            <img src="img/gentleman.jpg" alt="">
-            <div class="c-hed-sp">
-                <h3>Gentleman</h3>
-                <h5>男士系列</h5>
+    <div class="content">
+        <div class="con-wrapper">
+            <div class="con-title">
+                <div class="c-ti-box">
+                    <span><a href="index.html">首页&nbsp;&gt;</a></span>
+                    <span>购物车</span>
+                </div>
             </div>
-        </div>
-        <div class="con-title">
-            <div class="c-ti-box">
-                <span><a href="index.html">首页&gt;</a></span>
-                <span>男士</span>
-            </div>
-        </div>
-        <!-- 男士4张图 -->
-        <div class="con-manImg">
-            <div class="maimg1">
-                <a href="javascript:;">
-                    <img src="img/2019021817172731.jpg">
-                    <div class="c-hed-sp">
-                        <h3>Men‘s Sunglasses</h3>
-                        <h5>男士太阳镜</h5>
+            <div class="car-wrapper">
+                <div class="car-title">
+                    <span class="order_x">
+                        我的购物车&nbsp; (
+                            <span class="car-num"></span>
+                        )
+                    </span>
+                    <span class="mail">
+                        VIP@ARTGRI.COM
+                    </span>
+                    <span class="tel">
+                        400 885 8586
+                    </span>
+                </div>
+                <div class="car-con">
+                    <div class="car-ctop">
+                        <div class="c-c">
+                            <!-- <div class="car-con-list">
+                                <div class="imgbox">
+                                    <img src="img/BL3019C10_1.jpg">
+                                </div>
+                                <div class="textbox">
+                                    <h3>BL7051 A60</h3>
+                                    <p class="ng-binding">镜框 镜框材质|金属</p>
+                                    <p class="ng-binding">镜片 蓝灰色全色片高清非偏光镜片</p>
+                                    <span class="shan">删除</span>
+                                </div>
+                                <div class="dui">
+                                    <a href="javascript:;" class="ng-dui"></a>
+                                </div>
+                                <div class="car-rmb">
+                                    <span class="zj">总价</span>
+                                    <span class="z-rmb">
+                                        RMB
+                                        <span class="zongjia">100</span>
+                                    </span>
+                                </div>
+                                <div class="car-rmb">
+                                    <span class="zj">单价</span>
+                                    <span class="z-rmb">
+                                        RMB
+                                        <span class="danjia">100</span>
+                                    </span>
+                                </div>
+                                <div class="car-num">
+                                    <span>数量</span>
+                                    <div>
+                                        <a class="jian"></a>
+                                        <input type="num" class="car-shu" value="1">
+                                        <a class="jia">+</a>
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="car-con-list">
+                                <div class="imgbox">
+                                    <img src="img/BL3019C10_1.jpg">
+                                </div>
+                                <div class="textbox">
+                                    <h3>BL7051 A60</h3>
+                                    <p class="ng-binding">镜框 镜框材质|金属</p>
+                                    <p class="ng-binding">镜片 蓝灰色全色片高清非偏光镜片</p>
+                                    <span class="shan">删除</span>
+                                </div>
+                                <div class="dui">
+                                    <a href="javascript:;" class="ng-dui"></a>
+                                </div>
+                                <div class="car-rmb">
+                                    <span class="zj">总价</span>
+                                    <span class="z-rmb">
+                                        RMB
+                                        <span class="zongjia">500</span>
+                                    </span>
+                                </div>
+                                <div class="car-rmb">
+                                    <span class="zj">单价</span>
+                                    <span class="z-rmb">
+                                        RMB
+                                        <span class="danjia">500</span>
+                                    </span>
+                                </div>
+                                <div class="car-num">
+                                    <span>数量</span>
+                                    <div>
+                                        <a class="jian"></a>
+                                        <input type="num" class="car-shu" value="1">
+                                        <a class="jia">+</a>
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
                     </div>
-                </a>
-            </div>
-            <div class="maimg2">
-                <a href="javascript:;">
-                    <img src="img/201902181714249.jpg">
-                    <div class="c-hed-sp">
-                        <h3>Men‘s Optical</h3>
-                        <h5>男士光学镜</h5>
+                    <div class="car-bottom">
+                        <div class="car-zj">
+                            <div class="car-4">
+                                <a href="javascript:;" class="quan-dui ng-dui"></a>
+                                <span class="cart_quan ">全选</span>
+                            </div>
+                            <div class="car-zjs">
+                                <span class="cart_rmb1">总计</span>
+                                <span class="cart_rmb2">
+                                    RMB &nbsp;
+                                    <span class="car-zj-num">
+                                        1111
+                                    </span>
+                                </span>
+                            </div>
+                            <div>
+                                <button id="addcar">结算</button>
+                            </div>
+                        </div>
                     </div>
-                </a>
+                </div>
             </div>
-            <div class="maimg3">
-                <a href="javascript:;">
-                    <img src="img/2017060116480068.jpg">
-                    <div class="c-hed-sp">
-                        <h3>Classic Aviators</h3>
-                        <h5>经典永恒</h5>
-                    </div>
-                </a>
-            </div>
-            <div class="maimg4">
-                <a href="javascript:;">
-                    <img src="img/2017042713105331.jpg">
-                    <div class="c-hed-sp">
-                        <h3>Fashion Essentials</h3>
-                        <h5>时尚商务</h5>
-                    </div>
-                </a>
-            </div>
-        </div>
-        
-        <div class="most">
-			<div>Most wanted</div>
-			<div>特别推荐</div>
-		</div>
-		<div class="mostGlasses">
-			<div class="direction">
-				<!-- <img class="dLeft" src="img/left.png" alt=""/>
-				<img class="dRight" src="img/right.png" alt=""/> -->
-			</div>
-			<div class="swiper-container swiper-container2">
-				<div class="swiper-wrapper">
-					<div class="swi-one swiper-slide">
-						<div class="yanList swiper-container swiper-container3">
-							<div class="swiper-wrapper yanl">
-								<div class="click_toggle swiper-slide">
-									<div class="opacity ">
-										<a href="javascript:;">
-											<img src="img/BL3019C10_1.jpg" alt="">
-											<h3>BL3019 C10</h3>
-											<h3>RMB 7889</h3>
-										</a>
-									</div>
-								</div>
-								<div class="click_toggle swiper-slide">
-									<div class="opacity ">
-										<a href="javascript:;">
-											<img src="img/BL5027B91_1.jpg" alt="">
-											<h3>BL3019 C10</h3>
-											<h3>RMB 785</h3>
-										</a>
-									</div>
-								</div>
-								<div class="click_toggle swiper-slide">
-									<div class="opacity ">
-										<a href="javascript:;">
-											<img src="img/BL5027B91_1.jpg" alt="">
-											<h3>BL3019 C10</h3>
-											<h3>RMB 7805</h3>
-										</a>
-									</div>
-								</div>
-								<div class="swiper-pagination swiper-p3"></div>	
-							</div>
-						</div>
-						<div class="yanList swiper-container swiper-container3">
-								<div class="swiper-wrapper yanl">
-									<div class="click_toggle swiper-slide">
-										<div class="opacity ">
-											<a href="javascript:;">
-												<img src="img/BL3019C10_1.jpg" alt="">
-												<h3>BL3019 C10</h3>
-												<h3>RMB 7889</h3>
-											</a>
-										</div>
-									</div>
-									<div class="click_toggle swiper-slide">
-										<div class="opacity ">
-											<a href="javascript:;">
-												<img src="img/BL5027B91_1.jpg" alt="">
-												<h3>BL3019 C10</h3>
-												<h3>RMB 785</h3>
-											</a>
-										</div>
-									</div>
-									<div class="click_toggle swiper-slide">
-										<div class="opacity ">
-											<a href="javascript:;">
-												<img src="img/BL5027B91_1.jpg" alt="">
-												<h3>BL3019 C10</h3>
-												<h3>RMB 7805</h3>
-											</a>
-										</div>
-									</div>
-									<div class="swiper-pagination swiper-p3"></div>	
-								</div>
-						</div>
-						<div class="yanList swiper-container swiper-container3">
-								<div class="swiper-wrapper yanl">
-									<div class="click_toggle swiper-slide">
-										<div class="opacity ">
-											<a href="javascript:;">
-												<img src="img/BL3019C10_1.jpg" alt="">
-												<h3>BL3019 C10</h3>
-												<h3>RMB 7889</h3>
-											</a>
-										</div>
-									</div>
-									<div class="click_toggle swiper-slide">
-										<div class="opacity ">
-											<a href="javascript:;">
-												<img src="img/BL5027B91_1.jpg" alt="">
-												<h3>BL3019 C10</h3>
-												<h3>RMB 785</h3>
-											</a>
-										</div>
-									</div>
-									<div class="click_toggle swiper-slide">
-										<div class="opacity ">
-											<a href="javascript:;">
-												<img src="img/BL5027B91_1.jpg" alt="">
-												<h3>BL3019 C10</h3>
-												<h3>RMB 7805</h3>
-											</a>
-										</div>
-									</div>
-									<div class="swiper-pagination swiper-p3"></div>	
-								</div>
-						</div>
-					</div>
-					<div class="swi-one swiper-slide">
-							<div class="yanList swiper-container swiper-container3">
-								<div class="swiper-wrapper yanl">
-									<div class="click_toggle swiper-slide">
-										<div class="opacity ">
-											<a href="javascript:;">
-												<img src="img/BL3019C10_1.jpg" alt="">
-												<h3>BL3019 C10</h3>
-												<h3>RMB 7889</h3>
-											</a>
-										</div>
-									</div>
-									<div class="click_toggle swiper-slide">
-										<div class="opacity ">
-											<a href="javascript:;">
-												<img src="img/BL5027B91_1.jpg" alt="">
-												<h3>BL3019 C10</h3>
-												<h3>RMB 785</h3>
-											</a>
-										</div>
-									</div>
-									<div class="click_toggle swiper-slide">
-										<div class="opacity ">
-											<a href="javascript:;">
-												<img src="img/BL5027B91_1.jpg" alt="">
-												<h3>BL3019 C10</h3>
-												<h3>RMB 7805</h3>
-											</a>
-										</div>
-									</div>
-									<div class="swiper-pagination swiper-p3"></div>	
-								</div>
-							</div>
-							<div class="yanList swiper-container swiper-container3">
-									<div class="swiper-wrapper yanl">
-										<div class="click_toggle swiper-slide">
-											<div class="opacity ">
-												<a href="javascript:;">
-													<img src="img/BL3019C10_1.jpg" alt="">
-													<h3>BL3019 C10</h3>
-													<h3>RMB 7889</h3>
-												</a>
-											</div>
-										</div>
-										<div class="click_toggle swiper-slide">
-											<div class="opacity ">
-												<a href="javascript:;">
-													<img src="img/BL5027B91_1.jpg" alt="">
-													<h3>BL3019 C10</h3>
-													<h3>RMB 785</h3>
-												</a>
-											</div>
-										</div>
-										<div class="click_toggle swiper-slide">
-											<div class="opacity ">
-												<a href="javascript:;">
-													<img src="img/BL5027B91_1.jpg" alt="">
-													<h3>BL3019 C10</h3>
-													<h3>RMB 7805</h3>
-												</a>
-											</div>
-										</div>
-										<div class="swiper-pagination swiper-p3"></div>	
-									</div>
-							</div>
-							<div class="yanList swiper-container swiper-container3">
-									<div class="swiper-wrapper yanl">
-										<div class="click_toggle swiper-slide">
-											<div class="opacity ">
-												<a href="javascript:;">
-													<img src="img/BL3019C10_1.jpg" alt="">
-													<h3>BL3019 C10</h3>
-													<h3>RMB 7889</h3>
-												</a>
-											</div>
-										</div>
-										<div class="click_toggle swiper-slide">
-											<div class="opacity ">
-												<a href="javascript:;">
-													<img src="img/BL5027B91_1.jpg" alt="">
-													<h3>BL3019 C10</h3>
-													<h3>RMB 785</h3>
-												</a>
-											</div>
-										</div>
-										<div class="click_toggle swiper-slide">
-											<div class="opacity ">
-												<a href="javascript:;">
-													<img src="img/BL5027B91_1.jpg" alt="">
-													<h3>BL3019 C10</h3>
-													<h3>RMB 7805</h3>
-												</a>
-											</div>
-										</div>
-										<div class="swiper-pagination swiper-p3"></div>	
-									</div>
-							</div>
-					</div>
-				</div>
-				
-				<div class="swiper-button-prev swiper-button-black"></div><!--左箭头-->
-    			<div class="swiper-button-next swiper-button-black"></div><!--右箭头-->
-			</div>
-        </div>
-        <div class="con-ftr">
-            <a href="javascript:;">
-                <img src="img/2018012815065547.jpg">
-            </a>
         </div>
     </div>
     <!-- footer -->

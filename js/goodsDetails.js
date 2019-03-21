@@ -65,11 +65,13 @@ $(function(){
         },
         success:function(objs){
             jsonN=objs;
-            console.log(objs)
+             let onum = objs.goodsCount
+
+             console.log(onum)
             let htmlStr="";
             let htmlText="";
             // for(let i in objs){
-                for(let j=1;j<=4;j++){
+                for(let j=1;j<=onum;j++){
                     // console.log(j);
                     if(j==1){
                         // console.log(j-1)
@@ -132,4 +134,26 @@ $(function(){
         }
     })
     console.log(jsonN)
+    console.log(getCookie("userphone"))
+    $("#addcar").on("click",function(){
+        let vipName = getCookie("userphone")
+
+        $.ajax({
+            "type":"get",
+            "url":"php/addShoppingCart.php",
+            "dataType":"json",
+            "data":{
+                "vipName":vipName,
+                "goodsId":id,
+                "goodsCount":1
+            },
+            success:function(data){
+                if(data == 1){
+                    alert("添加成功")
+                }else{
+                    alert("添加失败")
+                }
+            }
+        })
+    })
 })
