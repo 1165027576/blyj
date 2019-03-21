@@ -177,6 +177,12 @@ $(function () {
             $(".dui a").addClass("ng-dui");
             zonjia()
         })
+
+    //输入框
+    $(document).on("input propertychange",".car-shu",function(){
+        let th = this
+        jisuan(th); 
+    }) 
     quanxuan()
     jisuan()
 

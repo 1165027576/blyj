@@ -57,14 +57,12 @@ $(function(){
 		return null;
 	}	
 	let temp = getCookie("userphone");
-	// console.log(temp);
-		$.post("loginCheckone.php",{"userphone":temp},function(data){
-			// console.log(data);
-			if (data==1) {
-				console.log("haha");
+	console.log(temp)
+		if(temp!=null){
+			console.log("haha");
 				$(".login a").css("display","none");
 				$(".login span").css("display","block");
 				$(".login span").html("欢迎："+temp);
-			}
-		})
+		}
+	
 })
