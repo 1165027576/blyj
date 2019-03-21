@@ -54,7 +54,7 @@ function jisuan(zhe) {
     zonjia()
 
 };
-
+//总价
 function zonjia() {
     let zon = 0;
     for (let i = 0; i < $(".zongjia").length; i++) {
@@ -67,9 +67,10 @@ function zonjia() {
     }
     $(".car-zj-num").html(zon)
 }
-
+let ddd = 1;
+//全选
 function quanxuan() {
-    let ddd = 1;
+    
     for (let i = 0; i < $(".dui").length; i++) {
         if ($(".dui").children().eq(i).attr("class") != "ng-dui") {
             ddd = 0
@@ -77,12 +78,13 @@ function quanxuan() {
         } else {
             ddd = 1
         }
-    }
+    }  
     if (ddd != 1) {
         $(".quan-dui").removeClass("ng-dui")
     } else {
         $(".quan-dui").addClass("ng-dui")
     }
+    
 }
 
 
@@ -156,27 +158,60 @@ $(function () {
     //     }
     // })
     //单
-    $(".dui a").toggle(function () {
+    $(".dui a").click(function () {
+        if($(this).attr("class") == "ng-dui"){
             $(this).removeAttr("class")
-            quanxuan()
-            zonjia()
-        },
-        function () {
+        }else{
             $(this).addClass("ng-dui")
+        }
             quanxuan()
             zonjia()
-        })
+        }
+        // ,function () {
+        //     if($(this).attr("class") != "ng-dui"){
+        //     $(this).addClass("ng-dui")
+        // }
+        //     quanxuan()
+        //     zonjia()
+        // }
+        )
+    
     //全
-    $(".quan-dui").toggle(function () {
-            $(".quan-dui").removeClass("ng-dui")
-            $(".dui a").removeClass("ng-dui");
-            zonjia()
-        },
-        function () {
-            $(".quan-dui").addClass("ng-dui")
-            $(".dui a").addClass("ng-dui");
-            zonjia()
-        })
+    // $(".quan-dui").toggle(function () {
+    //     console.log($(".quan-dui").attr("class"))
+    //     if($(".quan-dui").attr("class") == "quan-dui ng-dui"){
+    //         $(".quan-dui").removeClass("ng-dui")
+    //         $(".dui a").removeClass("ng-dui");
+    //     }
+            
+    //         zonjia()
+    //     },
+    //     function () {
+    //         if($(".quan-dui").attr("class") != "quan-dui ng-dui"){
+    //         $(".quan-dui").addClass("ng-dui")
+    //         $(".dui a").addClass("ng-dui");
+    //     }
+    //         zonjia()
+    //     })
+        $(".quan-dui").click(function () {
+            console.log($(".quan-dui").attr("class"))
+            if($(".quan-dui").attr("class") == "quan-dui ng-dui"){
+                $(".quan-dui").removeClass("ng-dui")
+                $(".dui a").removeClass("ng-dui");
+            }else{
+                $(".quan-dui").addClass("ng-dui")
+                $(".dui a").addClass("ng-dui");
+            }
+                
+                zonjia()
+            }
+            // ,function () {
+            //     if($(".quan-dui").attr("class") != "quan-dui ng-dui"){
+            //         $(".quan-dui").addClass("ng-dui")
+            //         $(".dui a").addClass("ng-dui");
+            //     }
+                // zonjia()}
+            )
 
     //输入框
     $(document).on("input propertychange",".car-shu",function(){
